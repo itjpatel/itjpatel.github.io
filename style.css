@@ -30,9 +30,11 @@ body{
 
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items:flex-start;
     margin-top: 50px;
     margin-bottom: 50px;
+
+    padding-top: 5vh;
 }
 
 .glass-container{
@@ -61,13 +63,12 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
     padding: 15px 30px;
-    border-radius: 20px;
-    width: 80%;
-    max-width: 1200px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2),
-                -4px -4px 10px rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    width: 95vw;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.002),
+                -4px -4px 10px rgba(255, 255, 255, 0.008);
 }
 
 .logo{
@@ -79,20 +80,23 @@ body{
 .nav-links{
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 30px;
+    padding: 0;
 }
+
 .nav-links li a {
-    padding: 10px 15px;
-    border-radius: 10px;
     text-decoration: none;
-    font-size: 20px;
+    width: 25%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4em;
     color: #fff;
-    transition: color 0.3s ease;
+    transition: font-weight 0.3s ease;
 }
 
 .nav-links li a:hover{
-    color: #4a90e2;
-    background-color: #9dc2c4;
+    font-weight: bold;
+    text-shadow: 0px 0px 3px #fff;
 }
 
 .contact-buttons{
@@ -106,11 +110,11 @@ body{
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: rgba(80, 125, 151, 0.2);
+    background: rgba(80, 125, 151, 0.02);
     border: none;
     border-radius: 50%;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2),
-                -4px -4px 10px rgba(255, 255, 255, 0.4);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.02),
+                -4px -4px 10px rgba(255, 255, 255, 0.08);
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -130,10 +134,4 @@ body{
 .icon-btn:active{
     box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.06),
                 inset -2px -2px 5px rgba(0, 0, 0, 0.02);
-}
-
-.heading-container{
-    margin-top: 30px;
-    color: white;
-    text-align: center;
 }
