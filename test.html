@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Panels</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow-x: hidden; /* Prevent horizontal scrollbar during animation */
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .nav-buttons button {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #777;
+        }
+
+        .panel-container {
+            position: relative;
+            width: 100%;
+            height: calc(100vh - 60px); /* Adjust based on header height */
+            overflow: hidden;
+        }
+
+        .panel {
+            position: absolute;
+            top: 0;
+            left: 100%; /* Start off-screen to the right */
+            width: 100%;
+            height: 100%;
+            background-color: lightblue;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: left 0.5s ease-out; /* Smooth slide transition */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .panel.active {
+            left: 0; /* Slide into view */
+        }
+
+        /* Unique background colors for panels */
+        #panel1 { background-color: #f0f8ff; } /* AliceBlue */
+        #panel2 { background-color: #fff0f5; } /* LavenderBlush */
+        #panel3 { background-color: #f5fffa; } /* MintCream */
+        #panel4 { background-color: #ffdab9; } /* PeachPuff */
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="nav-buttons">
+            <button onclick="showPanel('panel1')">Panel 1</button>
+            <button onclick="showPanel('panel2')">Panel 2</button>
+            <button onclick="showPanel('panel3')">Panel 3</button>
+            <button onclick="showPanel('panel4')">Panel 4</button>
+        </div>
+    </div>
+
+    <div class="panel-container">
+        <div id="panel1" class="panel active">
+            <h2>Welcome to Panel 1!</h2>
+        </div>
+        <div id="panel2" class="panel">
+            <h2>This is Panel 2!</h2>
+        </div>
+        <div id="panel3" class="panel">
+            <h2>You're viewing Panel 3!</h2>
+        </div>
+        <div id="panel4" class="panel">
+            <h2>And here's Panel 4!</h2>
+        </div>
+    </div>
+
+    <script>
+        let currentPanel = 'panel1'; // Keep track of the currently active panel
+
+        function showPanel(panelId) {
+            // If the clicked panel is already active, do nothing
+            if (panelId === currentPanel) {
+                return;
+            }
+
+            const panels = document.querySelectorAll('.panel');
+            let newPanelElement = document.getElementById(panelId);
+            let currentPanelElement = document.getElementById(currentPanel);
+
+            // Hide the current panel by sliding it out
+            if (currentPanelElement) {
+                currentPanelElement.classList.remove('active');
+            }
+
+            // Show the new panel by adding the 'active' class after a short delay
+            // This delay helps ensure the previous panel starts its transition before the new one
+            setTimeout(() => {
+                newPanelElement.classList.add('active');
+                currentPanel = panelId; // Update the current panel
+            }, 50); // Small delay to ensure smooth transition
+        }
+    </script>
+
+</body>
+</html>
