@@ -22,16 +22,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*font-weight: bold;
-    color: rgba(255, 255, 255, 0.3)*/
-}
-html{
-    height: 100%;
 }
 
+
 body{
-    
-    height: 100%;
     /*background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url('bg.png');*/
     background: linear-gradient( rgba(50, 50, 50, 1), rgba(200, 200, 200, 1) );
     /*background-color: rgba(13,21,16,1);*/
@@ -40,21 +34,15 @@ body{
     background-size: cover;
     background-position: center top;
     background-attachment: fixed;
-
-    display: flex;
-    justify-content: center;
-    align-items:flex-start;
-
-    padding-top: 10vh;
 }
-
+/*
 .glass-container{
     height: 520px;
     width: 350px;
     padding: 30px 50px;
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(15px); /*adjust "thickness of glass*/
+    backdrop-filter: blur(15px);
     border-top: 1px solid rgba(255, 255, 255, 0.4);
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.089);
@@ -69,17 +57,23 @@ body{
     text-align: justify;
     line-height: 185%;
 }
+*/
 
 .navbar{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0);
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-top: 10vh;
+    margin-bottom: 1vh;
+    background: rgba(184, 19, 19, 0);
     padding: 5px 15px;
     border-radius: 15px;
     width: 95vw;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.002),
                 -4px -4px 10px rgba(255, 255, 255, 0.008);
+    text-align: center;
 }
 
 /*
@@ -161,4 +155,35 @@ body{
 }
 */
 
+.container {
+    display: grid;
 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    grid-template-areas:
+        "header header"
+        "menu content"
+        "footer footer";
+    gap: 5px;
+    background-color: #2196F3;
+    padding: 5px;
+    margin-left: 12.5vw;
+    margin-right: 12.5vw;
+}
+.container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+}
+.container > div.header {
+    grid-area: header;
+    text-align: center;
+}
+.container > div.menu {
+    grid-area: menu;
+}
+.container > div.content {
+    grid-area: content;
+}
+.container > div.footer {
+    grid-area: footer;
+}
