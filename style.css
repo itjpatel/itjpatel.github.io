@@ -157,33 +157,49 @@ body{
 
 .container {
     display: grid;
-
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-        "header header"
-        "menu content"
-        "footer footer";
+        "music project project bio"
+        "art project project contact"
+        "books blog games sign";
     gap: 5px;
-    background-color: #2196F3;
+    background-color: #2195f300;
     padding: 5px;
     margin-left: 12.5vw;
     margin-right: 12.5vw;
+    margin-top: 1vh;
+    height: 70vh;
 }
 .container > div {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(0, 129, 6);
     padding: 10px;
+    font-family: monospace;
 }
-.container > div.header {
-    grid-area: header;
-    text-align: center;
+.container > div.music {
+    grid-area: music;
 }
-.container > div.menu {
-    grid-area: menu;
+.container > div.project {
+    grid-area: project;
 }
-.container > div.content {
-    grid-area: content;
+.container > div.bio {
+    grid-area: bio;
 }
-.container > div.footer {
-    grid-area: footer;
+.container > div.art {
+    grid-area: art;
+}
+.container > div.contact {
+    grid-area: contact;
+}
+.container > div.books {
+    grid-area: books;
+}
+.container > div.blog {
+    grid-area: blog;
+}
+.container > div.games {
+    grid-area: games;
+}
+.container > div.sign {
+    grid-area: sign;
 }
