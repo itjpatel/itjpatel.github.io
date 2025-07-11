@@ -61,16 +61,12 @@ body{
 
 .navbar{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    margin-left: 2.5vw;
+    margin-left: 12.5vw;
     margin-right: 2.5vw;
     margin-top: 10vh;
-    margin-bottom: 1vh;
     background: rgba(184, 19, 19, 0);
-    padding: 5px 15px;
-    border-radius: 15px;
-    width: 95vw;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.002),
                 -4px -4px 10px rgba(255, 255, 255, 0.008);
     text-align: center;
@@ -165,22 +161,26 @@ body{
         "books blog games sign";
     gap: 5px;
     background-color: #2195f300;
-    padding: 5px;
     margin-left: 12.5vw;
     margin-right: 12.5vw;
-    margin-top: 1vh;
+    margin-top: 2vh;
     height: 70vh;
 }
 .container > div {
     background-color: rgb(0, 129, 6);
     padding: 10px;
     font-family: monospace;
+    color: #ffffff;
 }
 .container > div.music {
     grid-area: music;
 }
 .container > div.project {
     grid-area: project;
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url('blops2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .container > div.bio {
     grid-area: bio;
