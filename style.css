@@ -26,7 +26,7 @@
 
 body{
     /*background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url('bg.png');*/
-    background: linear-gradient( rgba(50, 50, 50, 1), rgba(200, 200, 200, 1) );
+    background: linear-gradient( rgba(20, 20, 20, 1), rgba(75, 75, 75, 1) );
     /*background-color: rgba(13,21,16,1);*/
     background-repeat: no-repeat;
     /*backdrop-filter: blur(3px);*/
@@ -164,19 +164,37 @@ body{
     margin-right: 12.5vw;
     margin-top: 2vh;
     height: 70vh;
+    transition: 75ms;
+    /*box-shadow: 0px 75px 100px 0px rgba(255, 255, 255, 0.7);*/
 }
 .container > div {
     background-color: rgb(0, 129, 6);
     font-family: "Rock 3D", system-ui;
-    font-size: 20px;
+    font-size: 1.5em;
     color: #ffffff;
     display: grid;
     place-items: end start;
-    padding: 2%;
+    padding: 5%;
 }
+/*
+.container:has(.music:hover) {
+    grid-template-columns: 1.25fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.089);
+
+}*/
+
 .container > div.music {
     grid-area: music;
 }
+.music:hover {
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
 .container > div.project {
     grid-area: project;
     background: linear-gradient( rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) ), url('mob.jpg');
@@ -187,27 +205,75 @@ body{
     align-items: end;
     padding: 0;
 }
+.project:hover {
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
 .container > div.bio {
     grid-area: bio;
 }
+.bio:hover {
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
 .container > div.art {
     grid-area: art;
 }
+.art:hover {
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
 .container > div.contact {
     grid-area: contact;
 }
+.contact:hover {
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
 .container > div.books {
     grid-area: books;
 }
+.books:hover {
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
 .container > div.blog {
     grid-area: blog;
 }
+.blog:hover {
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
 .container > div.games {
     grid-area: games;
 }
+.games:hover {
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
 .container > div.sign {
     grid-area: sign;
 }
+.sign:hover {
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
 .text-contrast {
     background-color: rgba(37, 37, 37, 0.5);
     width: 100%;
