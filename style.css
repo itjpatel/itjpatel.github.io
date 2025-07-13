@@ -1,10 +1,4 @@
-/* pixel fonts */
-.press-start-2p-regular {
-  font-family: "Press Start 2P", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
+/* fonts fonts */
 .silkscreen-regular {
   font-family: "Silkscreen", sans-serif;
   font-weight: 400;
@@ -14,6 +8,11 @@
 .silkscreen-bold {
   font-family: "Silkscreen", sans-serif;
   font-weight: 700;
+  font-style: normal;
+}
+.rock-3d-regular {
+  font-family: "Rock 3D", system-ui;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -168,19 +167,25 @@ body{
 }
 .container > div {
     background-color: rgb(0, 129, 6);
-    padding: 10px;
-    font-family: monospace;
+    font-family: "Rock 3D", system-ui;
+    font-size: 20px;
     color: #ffffff;
+    display: grid;
+    place-items: end start;
+    padding: 2%;
 }
 .container > div.music {
     grid-area: music;
 }
 .container > div.project {
     grid-area: project;
-    background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url('blops2.jpg');
+    background: linear-gradient( rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) ), url('mob.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    display: grid;
+    align-items: end;
+    padding: 0;
 }
 .container > div.bio {
     grid-area: bio;
@@ -202,4 +207,12 @@ body{
 }
 .container > div.sign {
     grid-area: sign;
+}
+.text-contrast {
+    background-color: rgba(37, 37, 37, 0.5);
+    width: 100%;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
 }
