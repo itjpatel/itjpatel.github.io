@@ -16,6 +16,15 @@
   font-style: normal;
 }
 
+/*icons*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
 
 *{
     margin: 0;
@@ -63,11 +72,9 @@ body{
     justify-content: flex-start;
     align-items: center;
     margin-left: 12.5vw;
-    margin-right: 2.5vw;
+    margin-right: 12.5vw;
     margin-top: 10vh;
     background: rgba(184, 19, 19, 0);
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.002),
-                -4px -4px 10px rgba(255, 255, 255, 0.008);
     text-align: center;
 }
 
@@ -111,18 +118,16 @@ body{
     /*text-shadow: 0px 0px 3px #093504;*/
 }
 
-/*
-.contact-buttons{
+
+.button{
     display: flex;
     gap: 10px;
+    margin-left:auto;
 }
-
 .icon-btn{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 5em;
+    height: 5em;
     background: rgba(80, 125, 151, 0.02);
     border: none;
     border-radius: 50%;
@@ -131,38 +136,34 @@ body{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
-.icon-btn i {
-    font-size: 18px;
-    color: #fff;
-}
-
 .icon-btn:hover{
     background: rgba(255, 255, 255, 0.3);
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.03),
                 -2px -2px 6px rgba(255, 255, 255, 0.05);
     color: #4a90e2;
 }
-
 .icon-btn:active{
     box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.06),
                 inset -2px -2px 5px rgba(0, 0, 0, 0.02);
 }
-*/
+
 
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
         "music project project bio"
+        "music project project bio"
+        "music project project contact"
         "art project project contact"
-        "books blog games sign";
+        "art books games sign"
+        "art books games sign";
     gap: 5px;
     background-color: #2195f300;
     margin-left: 12.5vw;
     margin-right: 12.5vw;
-    margin-top: 2vh;
+    margin-top: 5vh;
     height: 70vh;
     transition: 75ms;
     /*box-shadow: 0px 75px 100px 0px rgba(255, 255, 255, 0.7);*/
@@ -281,4 +282,9 @@ body{
     display: flex;
     align-items: center;
     padding-left: 2%;
+}
+
+.modern-mode {
+  background: black;
+  color: white;
 }

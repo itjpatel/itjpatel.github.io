@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rock+3D&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=mode_off_on" />
     <link rel="stylesheet" href="style.css" />
+    
 </head>
 
 <body>
@@ -23,19 +24,9 @@
             <li><a href="#contact" class="inactive-page">Contact</a></li>
         </ul>
         
-        <!--
-        <div class="contact-buttons">
-            <button class="icon-btn">
-            <i class="fas fa-phone-alt"></i>
-            </button>
-            <button class="icon-btn">
-            <i class="fas fa-envelope"></i>
-            </button>
-            <button class="icon-btn">
-            <i class="fas fa-comment-dots"></i>
-            </button>
+        <div class="button">
+            <button class="icon-btn" type="checkbox">
         </div>
-        -->
     </div>
 
     <!--
@@ -45,17 +36,26 @@
     </div> -->
 
     <div class="container">
-            <div class="music"><h4>My Music</h4></div>
-            <div class="bio"><h4>My Bio</h4></div>
+            <div class="music"><h4>Music</h4></div>
+            <div class="bio"><h4>BIO</h4></div>
             <div class="art"><h4>ART</h4></div>
             <div class="contact"><h4>reach me!</h4></div>
             <div class="books"><h4>Books</h4></div>
-            <div class="blog"><h4>My Blog</h4></div>
             <div class="games"><h4>Games</h4></div>
             <div class="sign"><h4>Sign your name!</h4></div>
             <div class="project"><h2 class="text-contrast">My Projects</h2></div>
     </div>
 
+
+    <button onclick="myFunction()">Toggle dark mode</button>
+
+
+    <script>
+    function myFunction() {
+        var element = document.body;
+        element.classList.toggle("modern-mode");
+    }
+    </script>
     
 </body>
 </html>
